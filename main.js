@@ -13,6 +13,8 @@ console.log(greeting)
 // Definer konstanter
 const constantVariabel = "I am Constant"
 
+let changeableVariable = "Testing"
+
 // Nest linje crasher progammet
 // constantVariabel = "This does not work"
 
@@ -21,4 +23,22 @@ const constantVariabel = "I am Constant"
  * kommentarer
  */
 
+let notDefined
+console.log(notDefined)
 
+let notYetDefined = null
+console.log(notYetDefined)
+
+// Komplekse typer
+
+// Lister (Array)
+const numbers = [1, 2, 3, 4,]
+console.log(numbers)
+
+// Sammling med informasjon (Object)
+const person = {
+    email: "lars.gunnar@jobloop.no",
+    name: "Lars Gunnar",
+    age: 34
+}
+console.log(person)
