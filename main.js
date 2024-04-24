@@ -54,23 +54,20 @@ const person = {
 let buttonElement = document.getElementById("theme-changer")
 
 function changeTheme() {
-    // Først finne body elemetet
-    const body = document.getElementById("body")
+    // Først finne det korrekte html elementet
+    const root = document.documentElement
 
-    // Så finn ut hva er klassenavnet nå
-    const currentTheme = body.className
+    // Så finn ut hvilket tema vi er på nå
+    const currentTheme = root.dataset.theme
+    const themeIsBright = currentTheme === "light"
 
-    // Viss lyst tema skift til mørkt
-    const isBright = currentTheme === "theme-bright"
-    console.log(isBright)
-
-    if (isBright) {
-        body.className = "theme-dark"
+    if (themeIsBright) {
+        // Viss lyst tema skift til mørkt
+        root.dataset.theme = "dark"
     } else {
-        body.className = "theme-bright"
+        // Viss mørkt tema skift til lyst
+        root.dataset.theme = "light"
     }
-
-    // Viss mørkt tema skift til lyst
 }
 
 buttonElement.addEventListener("click", changeTheme)
