@@ -1,1 +1,19 @@
-
+.theme-bright {
+    --text: #0a0505;
+    --background: #faf5f5;
+    --primary: #a86767;
+    --secondary: #add1cc;
+    --accent: #8a8fbc;
+}
+.theme-dark {
+    --text: #faf5f5;
+    --background: #0a0505;
+    --primary: #985757;
+    --secondary: #2e524d;
+    --accent: #434875;
+}
+  
+* {
+    background-color: var(--background);
+    color: var(--text);
+}
